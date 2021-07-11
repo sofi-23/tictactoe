@@ -17,7 +17,7 @@ const chooseO = () => {
     return selectedPlayer = false; //false es O
 }
 
-$(".botonX").on('click', function () {
+$(document).ready($(".botonX").on('click', function () {
     chooseX();
     $("#contenedorBotones").hide(800);
     sessionStorage.setItem('ficha', 'X');
@@ -25,9 +25,9 @@ $(".botonX").on('click', function () {
     playAs.innerHTML = "You'll play as "+ sessionStorage.getItem('ficha');
     playAs.style.color = "white";
     $("#inicio").append(playAs);
-})
+}))
 
-$(".botonO").on('click', function () {
+$(document).ready($(".botonO").on('click', function () {
     chooseO();
     $("#contenedorBotones").hide(800);
     sessionStorage.setItem('ficha', 'O');
@@ -37,7 +37,7 @@ $(".botonO").on('click', function () {
     $("#inicio").append(playAs);
 
 
-})
+}))
 //Json hecho solo para la entrega.
 let json = "celdas.json";
 const boxes = []; //nuevo array al que voy a pushear los datos del json
